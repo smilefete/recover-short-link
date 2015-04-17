@@ -1,0 +1,19 @@
+{
+  "name": "微博短链接还原",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "微博短链接还原插件",
+  "browser_action": {
+    "default_icon": "link.png",
+	"default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://weibo.com/*","http://s.weibo.com/*"],
+      "js": ["jQuery.js","recover.js","s_recover.js"]
+    }
+  ],
+  "permissions": [
+    "http://api.flickr.com/"
+  ]
+}
